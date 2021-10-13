@@ -1,25 +1,21 @@
-
 package com.ceep.dominio;
 
-
 public class Empleado {
-    private String nombre;
-    private double sueldo;
-    
-    //Constructor
 
+    protected String nombre;
+    protected double sueldo;
+
+    //Constructor
     public Empleado(String nombre, double sueldo) {
-       
+
         this.nombre = nombre;
         this.sueldo = sueldo;
     }
 
     public Empleado() {
     }
-    
-    //Getter and Setters
-    
 
+    //Getter and Setters
     public String getNombre() {
         return nombre;
     }
@@ -35,13 +31,15 @@ public class Empleado {
     public void setSueldo(double sueldo) {
         this.sueldo = sueldo;
     }
-    
+
     //Metodos
-    
-    public void MostrarDetalles(){
+//    public void mostrarDetalles() {
+//        System.out.println("Empleado:  " + this.nombre);
+//        System.out.println("Sueldo del empleado: " + this.sueldo);
+//    }
+
+    public String  mostrarDetalles() {
+       return "Empleado: " + this.nombre + ", " + this.sueldo;
         
     }
-    
-    
-    
 }

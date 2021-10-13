@@ -1,8 +1,7 @@
-
 package com.ceep.dominio;
 
-
 public class Gerente extends Empleado {
+
     private String departamento;
 
     //Constructor
@@ -10,9 +9,8 @@ public class Gerente extends Empleado {
         super(nombre, sueldo);
         this.departamento = departamento;
     }
-    
-    //Getter and Setters
 
+    //Getter and Setters
     public String getDepartamento() {
         return departamento;
     }
@@ -20,8 +18,16 @@ public class Gerente extends Empleado {
     public void setDepartamento(String departamento) {
         this.departamento = departamento;
     }
+
+    //Metodos
+//    public void mostrarDetalles() {
+//        System.out.println("Gerente: " + this.nombre + ", " + this.sueldo + ", " + this.departamento);
+//    }
     
-    
-    
-    
+    @Override
+    public String mostrarDetalles() {
+        return super.mostrarDetalles() +", Gerente: " + this.departamento;
+    }
+
+
 }
